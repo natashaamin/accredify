@@ -5,7 +5,6 @@ import ErrorNotFoundVue from "@/pages/ErrorNotFound.vue";
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    component: Home,
     children: [
       {
         path: "/home/:isPersonal",

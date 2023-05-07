@@ -20,21 +20,17 @@
 <script lang="ts">
 import TheSideNavBar from "@/components/TheSideNavBar.vue";
 import TheTopNavBar from "@/components/TheTopNavBar.vue";
-import { defineComponent, onMounted, ref, watch } from "vue";
+import { computed, defineComponent, onMounted, reactive, ref, watch } from "vue";
 import { useStore } from "@/stores/store";
 import GreetingSection from "@/components/GreetingSection.vue";
 import ManagedCareerGoal from "@/components/ManagedCareerGoal.vue";
 import RecentDocuments from "@/components/RecentDocuments.vue";
+import { useRoute } from "vue-router";
 
 const user = ref<any>(0);
 
 export default defineComponent({
   name: "Home",
-  data() {
-    return {
-      isPersonal: false as boolean,
-    };
-  },
   components: {
     TheSideNavBar,
     TheTopNavBar,
@@ -42,12 +38,12 @@ export default defineComponent({
     ManagedCareerGoal,
     RecentDocuments,
   },
-  mounted() {
-    this.isPersonal = this.$route.params.isPersonal === "personal";
-  },
   setup() {
     const { $state, loadUser } = useStore();
     const loaded = ref(false);
+
+    const route = useRoute();
+    const isPersonal = computed(() => route.params.isPersonal === 'personal');
 
     onMounted(async () => {
       await loadUser();
@@ -64,6 +60,7 @@ export default defineComponent({
     return {
       user: user,
       loaded,
+      isPersonal
     };
   },
 });
