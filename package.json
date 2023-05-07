@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+    "build": "vite build && vue-tsc --noEmit",
     "preview": "vite preview",
     "serve": "concurrently -k --raw \"yarn run dev:server\" \"yarn run dev:client\"",
     "dev:client": "vite",
     "build:client": "vite build",
     "dev:server": "ts-node server/app.ts",
-    "build:server": "vue-tsc",
+    "build:server": "tsc --project ./tsconfig.server.json",
     "test:unit": "vitest --dom"
   },
   "dependencies": {
