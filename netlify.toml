@@ -1,6 +1,7 @@
 [build]
   command = "yarn build"
   YARN_VERSION = "1.17.3"
+  functions = "netlify/functions"
   publish = "dist"
   NODE_ENV = "production"
 
