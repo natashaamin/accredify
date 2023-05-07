@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 
 export const getDocument = (req: Request, res: Response) => {
   res.set('Cache-Control', 'no-cache');
+  res.set('Content-Type', 'application/json');
   res.json({
     data: [
       {

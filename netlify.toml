@@ -1,7 +1,6 @@
 [build]
   command = "yarn build"
   YARN_VERSION = "1.17.3"
-  functions = "netlify/functions"
   publish = "dist"
   NODE_ENV = "production"
 
@@ -11,7 +10,7 @@
   status = 200
 
 [[redirects]]
-  from = "/aaa/*"
-  to = "https://accredify.netlify.app/:splat"
+  from = "/api/*"
+  to = "http://localhost:1111/:splat"
   status = 200
   force = true
