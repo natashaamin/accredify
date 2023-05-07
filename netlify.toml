@@ -4,6 +4,9 @@
   publish = "dist"
   NODE_ENV = "production"
 
+[start]
+  command = "yarn build"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -11,6 +14,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "http://localhost:1111/:splat"
+  to = "http://localhost:1111/api/:splat"
   status = 200
   force = true
+  headers = {Content-Type = "application/json"}
