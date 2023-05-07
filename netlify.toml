@@ -1,8 +1,13 @@
 [build]
-  YARN_VERSION = "1.17.3"
-  NODE_ENV = "production"
-  command = "cd src && npm install --global yarn && yarn run build:client && cd ../server && npm install --global yarn && yarn run build:server"
-  publish = "src/dist"
+  command = "yarn build"
+  publish = "./client/dist"
 
-[start]
-  command = "cd server && ts-node server/app.ts"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://localhost:3000/:splat"
+  status = 200

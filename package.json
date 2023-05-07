@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build:prod": "vite build && tsc --project ./tsconfig.server.json",
+    "build": "vite build && tsc --project ./tsconfig.server.json",
     "preview": "vite preview",
     "serve": "concurrently -k --raw \"yarn run dev:server\" \"yarn run dev:client\"",
     "start": "NODE_ENV=production ts-node server/app.ts",
