@@ -25,10 +25,12 @@
     ]
   },
   "include": [
+    "server/**/*.d.ts",
     "server/**/*.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "src/**/*.d.ts",
     "src/tests/unit/components/__tests__/**/*.ts",
     "src/tests/unit/components/__tests__/**/*.tsx", "src/tests/unit/components/TheTopNavBar.spec.ts",
   ],
