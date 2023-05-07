@@ -4776,9 +4776,9 @@ vue-template-compiler@^2.7.14:
     de-indent "^1.0.2"
     he "^1.2.0"
 
-vue-tsc@^1.4.2:
+vue-tsc@^1.6.4:
   version "1.6.4"
-  resolved "https://registry.npmjs.org/vue-tsc/-/vue-tsc-1.6.4.tgz"
+  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-1.6.4.tgz#ca4e931e9d3b9c55cd7a0f551bc0c9536edb6386"
   integrity sha512-8rg8S1AhRJ6/WriENQEhyqH5wsxSxuD5iaD+QnkZn2ArZ6evlhqfBAIcVN8mfSyCV9DeLkQXkOSv/MaeJiJPAQ==
   dependencies:
     "@volar/vue-language-core" "1.6.4"
