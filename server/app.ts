@@ -22,6 +22,7 @@ app.use(errorHandler);
 
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(path.resolve(), "dist")));
+  app.use("/server", routes);
 } else {
   app.use("/", express.static(path.join(path.resolve(), "public")));
   app.use("/server", routes);
