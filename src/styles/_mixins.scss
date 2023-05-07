@@ -1,0 +1,32 @@
+@import "@/styles/variables";
+
+@mixin links() {
+  color: $primary-p50;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-small;
+}
+
+@mixin h2() {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-bold;
+  line-height: 44px;
+}
+
+@mixin p() {
+  font-size: $font-size-normal;
+  color: $neutral-n60;
+  line-height: 24px;
+}
+
+@mixin h4() {
+  font-size: $font-size-h4;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-large;
+}
+
+@mixin h6() {
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  color: $neutral-n60;
+}
