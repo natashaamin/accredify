@@ -23,7 +23,6 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -58,7 +57,7 @@ This is an example of how to list things you need to use the software and how to
   npm install --global yarn
   ```
 
-## Customize configuration
+### Installation
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
