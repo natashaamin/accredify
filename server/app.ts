@@ -9,7 +9,7 @@ export const app = express();
 export const routes = express.Router();
 dotenv.config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = 1111;
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

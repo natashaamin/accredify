@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "vite build && NODE_ENV=production tsc --project ./tsconfig.server.json",
-    "preview": "vite preview && tsc --project ./tsconfig.server.json",
+    "preview": "vite preview && ts-node server/app.ts",
     "serve": "concurrently -k --raw \"yarn run dev:server\" \"yarn run dev:client\"",
     "start": "NODE_ENV=production ts-node server/app.ts",
     "dev:client": "vite",
