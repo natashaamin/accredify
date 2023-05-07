@@ -92,6 +92,7 @@ yarn run build
 # Get started
 
 Personal User - https://accredify.netlify.app/#/home/personal
+
 Managed User - https://accredify.app/#/home/managed
 
 Note: Please reload page when you navigate to page
