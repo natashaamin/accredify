@@ -1,4 +1,6 @@
 [build]
+  YARN_VERSION = "1.17.3"
+  NODE_ENV = "production"
   command = "cd src && yarn install && yarn run build:client && cd ../server && yarn install && yarn run build:server"
   publish = "client/dist"
 
