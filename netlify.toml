@@ -11,7 +11,7 @@
   status = 200
 
 [[redirects]]
-  from = "/api/*"
+  from = "/aaa/*"
   to = "https://accredify.netlify.app/:splat"
   status = 200
   force = true
