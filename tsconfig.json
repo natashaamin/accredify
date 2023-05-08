@@ -9,8 +9,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
+    "inlineSourceMap": true,
     "typeRoots": ["node_modules/@types"],
-    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -31,6 +31,7 @@
     "src/**/*.d.ts",
     "src/tests/unit/components/__tests__/**/*.ts",
     "src/tests/unit/components/__tests__/**/*.tsx", "src/tests/unit/components/TheTopNavBar.spec.ts",
+    "../cypress.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }

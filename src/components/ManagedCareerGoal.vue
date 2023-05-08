@@ -5,15 +5,17 @@
     <div class="career-goal--wrapper">
       <template v-if="loaded">
         <div class="career-goal--header">Your Progress</div>
-        <ProgressBar :progress="35"/>
+        <ProgressBar :progress="35" />
         <div class="career-goal-details">
           <span class="career-goal--title">I want to become a</span>
           <h4>{{ career?.[0]?.name }}</h4>
         </div>
-        <div class="career-goal--link">View Insights</div>
+        <a href="#" @click="navigateToPage" class="career-goal--link"
+          >View Insights</a
+        >
       </template>
       <template v-else>
-        <Loading/>
+        <Loading />
       </template>
     </div>
   </div>
@@ -25,6 +27,7 @@ import { defineComponent, onMounted, ref, watch } from "vue";
 import ProgressBar from "./ProgressBar.vue";
 import { ICareer } from "@/assets/types/type";
 import Loading from "@/components/LoadingComponent.vue";
+import { useRouter } from "vue-router";
 
 const career = ref<ICareer[]>([]);
 
@@ -32,11 +35,17 @@ export default defineComponent({
   name: "CareerGoal",
   components: {
     ProgressBar,
-    Loading
+    Loading,
   },
   setup() {
     const { $state, loadCareer } = useStore();
     const loaded = ref(false);
+
+    const router = useRouter();
+
+    const navigateToPage = () => {
+      router.push("/insights");
+    };
 
     onMounted(async () => {
       await loadCareer();
@@ -53,6 +62,7 @@ export default defineComponent({
     return {
       career: career,
       loaded,
+      navigateToPage,
     };
   },
 });
@@ -63,7 +73,7 @@ export default defineComponent({
 @import "@/styles/mixins";
 
 h4 {
-    margin: 0%;
+  margin: 0%;
 }
 
 .career-goal {
@@ -85,7 +95,7 @@ h4 {
 }
 
 .career-goal-details {
-    margin: 24px 40px 24px 40px;
+  margin: 24px 40px 24px 40px;
 }
 
 .career-goal--link {
@@ -93,9 +103,9 @@ h4 {
 }
 
 .career-goal--title {
-    font-size: $font-size-small;
-    font-weight: $font-weight-normal;
-    line-height: $line-height-small;
+  font-size: $font-size-small;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-small;
 }
 
 .career-goal--error {

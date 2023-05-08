@@ -2,7 +2,9 @@
   <div class="document-wrapper">
     <div class="document--header">
       <h4>Recent Documents</h4>
-      <div class="document--view-all">View All Documents</div>
+      <a href="#" @click="navigateToPage" class="document--view-all"
+        >View All Documents</a
+      >
     </div>
 
     <div v-if="loaded" class="document-list">
@@ -44,6 +46,7 @@ import { formattedDate } from "@/utils/util";
 import { ref, defineComponent, onMounted, watch } from "vue";
 import BaseIcon from "./BaseIcon.vue";
 import Loading from "@/components/LoadingComponent.vue";
+import { useRouter } from "vue-router";
 
 const documents = ref<IDocument>();
 
@@ -53,6 +56,12 @@ export default defineComponent({
   setup() {
     const { $state, loadDocument } = useStore();
     const loaded = ref(false);
+
+    const router = useRouter();
+
+    const navigateToPage = () => {
+      router.push("/documents");
+    };
 
     onMounted(async () => {
       await loadDocument();
@@ -70,6 +79,7 @@ export default defineComponent({
       documents: documents,
       loaded,
       formattedDate,
+      navigateToPage,
     };
   },
 });
