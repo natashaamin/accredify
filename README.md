@@ -72,23 +72,21 @@ yarn
 yarn run serve
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-yarn run build
-```
-
 ### Run Headed Component Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-yarn run test:unit # or `npm run test:unit` for headless testing
+yarn run test:unit
 ```
+
+### Run Headed End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
-yarn run build
+yarn run test:e2e
 ```
 
-# Get started
+
+
+# View deployed app on Netlify
 
 Personal User - https://accredify.netlify.app/#/home/personal
 
