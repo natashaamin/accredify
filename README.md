@@ -37,7 +37,7 @@
 
 ### Built With
 
-* [![Vue][Vue.js]][https://expressjs.com]
+* [![Vue][Vue.js]]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
