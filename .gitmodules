@@ -1,4 +1,4 @@
 [submodule "/accredify"]
     path = accredify
-    url = ../
+    url = https://github.com/natashaamin/accredify.git
     branch = main
