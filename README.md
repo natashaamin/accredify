@@ -61,6 +61,38 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+### Pull submodule 
+
+```sh
+git submodule update --init --recursive
+```
+
+### Run Laravel PHP 
+
+```sh
+php artisan serve
+```
+
+### Create migration file and run migrate
+
+```sh
+php artisan make:migration file-name
+php artisan migrate
+```
+
+### Create controller
+
+```sh
+php artisan make:controller file-name
+```
+
+### Create seed and run
+
+```sh
+php artisan make:seeder file-name
+php artisan db:seed
+```
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
