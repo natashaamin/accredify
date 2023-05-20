@@ -1,4 +1,4 @@
-[submodule "/accredify"]
-    path = accredify
-    url = https://github.com/natashaamin/accredify.git
-    branch = main
+[submodule "vue-project"]
+	path = vue-project
+	url = https://github.com/natashaamin/accredify.git
+	branch = main
